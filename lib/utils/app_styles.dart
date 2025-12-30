@@ -214,7 +214,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 10),
       fontWeight: FontWeight.w500,
-      fontFamily: 'Roboto',
+      fontFamily: 'times new roman',
       color: Colors.black,
     );
   }
@@ -227,7 +227,6 @@ abstract class AppStyles {
       color: Colors.black,
     );
   }
-
   static TextStyle style1(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 10),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
-import 'package:seller_center_dashboard/utils/app_assets.dart';
+import 'package:seller_center_dashboard/widgets/custom_sidebar.dart';
+
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -10,9 +9,15 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("Desktop Layout"),
-        Gap(20),
-        SvgPicture.asset(AppAssets.gmailNotification,color: Colors.amber,)
+        Expanded(
+          flex: 1,
+          child: CustomSidebar()),
+            Expanded(
+          flex: 4,
+          child: SizedBox()),
+            Expanded(
+          flex: 2,
+          child: SizedBox())
       ],
     );
   }
