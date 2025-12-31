@@ -10,6 +10,7 @@ class SellerDashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffD8D7DB),
       body: AdaptiveLayout(
         mobileLayout: (context) => MobileLayout(),
         tabletLayout: (context) => TabletLayout(),

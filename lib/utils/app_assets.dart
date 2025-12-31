@@ -6,7 +6,7 @@
 static  String get sideBarMenu => 'assets/images/SideBarMenu.svg';
 
   /// File path: assets/images/avater.svg
- static String get avater => 'assets/images/avater.svg';
+ static String get avater => 'assets/images/avater.png';
 
   /// File path: assets/images/bell.svg
  static  String get bell => 'assets/images/bell.svg';

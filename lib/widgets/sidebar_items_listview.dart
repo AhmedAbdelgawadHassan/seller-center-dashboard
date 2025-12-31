@@ -43,7 +43,7 @@ class _SidebarItemsListviewState extends State<SidebarItemsListview> {
                     sidebarItemModel: SidebarItemsListview.sidebarItems[index],
                     isSelected: index == currentIndex,
                   ),
-                  index == 2
+                  index == 2      
                       ? Positioned(
                           top: 0,
                           bottom: 0,

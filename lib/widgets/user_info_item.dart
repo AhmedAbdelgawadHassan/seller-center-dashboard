@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:seller_center_dashboard/utils/app_assets.dart';
+import 'package:seller_center_dashboard/utils/app_styles.dart';
+
+class UserInfoItem extends StatelessWidget {
+  const UserInfoItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text("Puma Official Store", style: AppStyles.style15Bold(context)),
+      subtitle: Text(
+        "Change Seller",
+        style: AppStyles.style12SemiBold(context),
+      ),
+      trailing: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Image(image: AssetImage(AppAssets.avater), height: 40, width: 40),
+          Positioned(
+            bottom: -5,
+            right:-5,
+            child: Container(
+              width: 12,
+              height: 12,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                shape: BoxShape.circle,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
