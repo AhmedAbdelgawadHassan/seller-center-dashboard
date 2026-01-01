@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:seller_center_dashboard/utils/app_styles.dart';
 
 class TotalPendinigOrdersChart extends StatelessWidget {
-  final bool isSmall;
-  const TotalPendinigOrdersChart({super.key, required this.isSmall});
+  const TotalPendinigOrdersChart({super.key});
 
   final List<double> values = const [8, 5, 2, 10];
   final List<String> labels = const ["T", "W", "T", "F"];
@@ -12,9 +11,7 @@ class TotalPendinigOrdersChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: isSmall ? 90 : 130,
-      child: BarChart(
+    return BarChart(
         BarChartData(
           maxY: 12,
           gridData: FlGridData(show: false),
@@ -29,7 +26,7 @@ class TotalPendinigOrdersChart extends StatelessWidget {
                   if (value.toInt() >= values.length) return const SizedBox();
                   return Text(values[value.toInt()].toInt().toString(),
                       style: AppStyles.style10SemiBold(context)
-                          .copyWith(fontSize: isSmall ? 9 : 11));
+                          .copyWith(fontSize: 11));
                 },
               ),
             ),
@@ -41,7 +38,7 @@ class TotalPendinigOrdersChart extends StatelessWidget {
                   if (value.toInt() >= labels.length) return const SizedBox();
                   return Text(labels[value.toInt()],
                       style: AppStyles.style10Regular(context)
-                          .copyWith(fontSize: isSmall ? 9 : 11));
+                          .copyWith(fontSize:  11));
                 },
               ),
             ),
@@ -55,7 +52,7 @@ class TotalPendinigOrdersChart extends StatelessWidget {
               barRods: [
                 BarChartRodData(
                   toY: values[i],
-                  width: isSmall ? 6 : 10,
+                  width: 10,
                   borderRadius: BorderRadius.circular(6),
                   color: barColor,
                 ),
@@ -63,7 +60,7 @@ class TotalPendinigOrdersChart extends StatelessWidget {
             );
           }),
         ),
-      ),
+    
     );
   }
 }

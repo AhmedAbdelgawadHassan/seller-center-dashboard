@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:seller_center_dashboard/utils/app_styles.dart';
 import 'package:seller_center_dashboard/widgets/promotion_details_listview.dart';
-import 'package:seller_center_dashboard/widgets/propotion_listtile.dart';
+import 'package:seller_center_dashboard/widgets/promotion_listtile.dart';
 
 class PromotiomDetails extends StatelessWidget {
   const PromotiomDetails({super.key, required this.promotionItems});
-  final List<PropotionListtile> promotionItems;
+  final List<PromotionListtile> promotionItems;
 
   @override
   Widget build(BuildContext context) {

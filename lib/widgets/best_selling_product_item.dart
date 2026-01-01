@@ -10,7 +10,7 @@ class BestSelleingProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 0.8,
+      aspectRatio: 0.6,
       child: CustombackgroundContainer(
         padding: EdgeInsets.all(15),
         child: Column(
@@ -18,14 +18,20 @@ class BestSelleingProductItem extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text("Best Selling Product\n sales Contribution",style: AppStyles.style11ExtraBold(context),),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text("Best Selling Product\n sales Contribution",style: AppStyles.style12Bold(context),)),
                 Spacer(),
-                Text("71%",style: AppStyles.style15Bold(context),),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text("71%",style: AppStyles.style15Bold(context),)),
               ],
             ),
             Gap(20),
-            BestSellingProductChart(
-              percent: 71,   // percent of the colored part
+            Expanded(
+              child: BestSellingProductChart(
+                percent: 71,   // percent of the colored part
+              ),
             ),
            
             Row(
@@ -34,13 +40,13 @@ class BestSelleingProductItem extends StatelessWidget {
              Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Best selling Products ",style: AppStyles.style9Regular(context)),
+                Text("Best selling Products ",style: AppStyles.style11Regular(context)),
                 Gap(7),
-             Text("Low Stock Level",style: AppStyles.style9Regular(context),),
+             Text("Low Stock Level",style: AppStyles.style11Regular(context),),
               ],
              ),
            
-             Text("1",style: AppStyles.style10Bold(context)),
+             Text("1",style: AppStyles.style11Bold(context)),
               ],
             ),
              Divider(
@@ -51,9 +57,9 @@ class BestSelleingProductItem extends StatelessWidget {
             ),
             Row(
               children: [
-                Text('Total out of Stock',style: AppStyles.style9Regular(context)),
+                Text('Total out of Stock',style: AppStyles.style11Regular(context)),
                 Spacer(),
-                Text('1351',style: AppStyles.style10Bold(context),),
+                Text('1351',style: AppStyles.style11Bold(context),),
               ],
             )
       

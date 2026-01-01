@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:seller_center_dashboard/utils/app_styles.dart';
 
-class PropotionListtile extends StatelessWidget {
-  const PropotionListtile({
+class PromotionListtile extends StatelessWidget {
+  const PromotionListtile({
     super.key,
     required this.title,
     required this.image,

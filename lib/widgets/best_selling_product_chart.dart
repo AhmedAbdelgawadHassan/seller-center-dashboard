@@ -9,29 +9,26 @@ class BestSellingProductChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return    SizedBox(
-      height: 100,
-      width: 100,
-      child: Stack(
+    return     Stack(
         alignment: Alignment.center,
         children: [
           PieChart(
             PieChartData(
               startDegreeOffset: -90,
               sectionsSpace: 0,
-              centerSpaceRadius: 30,
+              centerSpaceRadius: 50,
               sections: [
                 PieChartSectionData(
                   value: percent,
                   color: const Color(0xFF6C63FF), // بنفسجي غامق
-                  radius: 12,
+                  radius: 16,
                   showTitle: false,
                 ),
       
                 PieChartSectionData(
                   value: 100 - percent,
                   color: const Color(0xFFD6D4FF), // بنفسجي فاتح
-                  radius: 12,
+                  radius: 16,
                   showTitle: false,
                 ),
               ],
@@ -43,7 +40,7 @@ class BestSellingProductChart extends StatelessWidget {
             style:AppStyles.style16SemiBold(context)
           ),
         ],
-      ),
+      
     );
   }
 }

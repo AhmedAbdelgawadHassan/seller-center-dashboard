@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:seller_center_dashboard/utils/app_assets.dart';
 import 'package:seller_center_dashboard/utils/app_styles.dart';
 import 'package:seller_center_dashboard/widgets/promotion_item.dart';
-import 'package:seller_center_dashboard/widgets/propotion_listtile.dart';
+import 'package:seller_center_dashboard/widgets/promotion_listtile.dart';
 
 class PromotionSection extends StatelessWidget {
   const PromotionSection({super.key});
@@ -17,10 +17,10 @@ class PromotionSection extends StatelessWidget {
       title:
           'Lifestyle:  3.3 PAYDAY 2022    15% off min spend SGD 100   HOME10',
       promotionDetailsItems: [
-        PropotionListtile(title: '28 Feb - 07 Mar 22', image: AppAssets.calendar),
-        PropotionListtile(title: 'Voucher discount: 10%', image: AppAssets.path),
-        PropotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
-        PropotionListtile(title: 'Seller funded portion: 100% out of the discount', image: AppAssets.tags),
+        PromotionListtile(title: '28 Feb - 07 Mar 22', image: AppAssets.calendar),
+        PromotionListtile(title: 'Voucher discount: 10%', image: AppAssets.path),
+        PromotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
+        PromotionListtile(title: 'Seller funded portion: 100% out of the discount', image: AppAssets.tags),
         ],
     ),
      PromotionItem(
@@ -31,10 +31,10 @@ class PromotionSection extends StatelessWidget {
       title:
           'Lifestyle:  3.3 PAYDAY 2022    15% off min spend SGD 100   HOME10',
       promotionDetailsItems: [
-        PropotionListtile(title: '28 Feb - 07 Mar 22', image: AppAssets.calendar),
-        PropotionListtile(title: 'Voucher discount: 10%', image: AppAssets.path),
-        PropotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
-        PropotionListtile(title: 'Seller funded portion: 100% out of the discount', image: AppAssets.tags),
+        PromotionListtile(title: '28 Feb - 07 Mar 22', image: AppAssets.calendar),
+        PromotionListtile(title: 'Voucher discount: 10%', image: AppAssets.path),
+        PromotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
+        PromotionListtile(title: 'Seller funded portion: 100% out of the discount', image: AppAssets.tags),
         ],
     ),
      PromotionItem(
@@ -45,10 +45,10 @@ class PromotionSection extends StatelessWidget {
       title:
           "[CRM Campaign] Sports 30% + 10% CB (TGIF30)",
       promotionDetailsItems: [
-        PropotionListtile(title: '18 Feb  22', image: AppAssets.calendar),
-        PropotionListtile(title: 'Voucher discount: 30%', image: AppAssets.path),
-        PropotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
-        PropotionListtile(title: 'Seller funded portion: 85% out of the discount', image: AppAssets.tags),
+        PromotionListtile(title: '18 Feb  22', image: AppAssets.calendar),
+        PromotionListtile(title: 'Voucher discount: 30%', image: AppAssets.path),
+        PromotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
+        PromotionListtile(title: 'Seller funded portion: 85% out of the discount', image: AppAssets.tags),
         ],
     ),
      PromotionItem(
@@ -59,10 +59,10 @@ class PromotionSection extends StatelessWidget {
       title:
           'Lifestyle:  3.3 PAYDAY 2022    15% off min spend SGD 100   HOME10',
       promotionDetailsItems: [
-        PropotionListtile(title: '28 Feb - 07 Mar 22', image: AppAssets.calendar),
-        PropotionListtile(title: 'Voucher discount: 10%', image: AppAssets.path),
-        PropotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
-        PropotionListtile(title: 'Seller funded portion: 100%  out of the discount', image: AppAssets.tags),
+        PromotionListtile(title: '28 Feb - 07 Mar 22', image: AppAssets.calendar),
+        PromotionListtile(title: 'Voucher discount: 10%', image: AppAssets.path),
+        PromotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
+        PromotionListtile(title: 'Seller funded portion: 100%  out of the discount', image: AppAssets.tags),
         ],
     ),
      PromotionItem(
@@ -73,10 +73,10 @@ class PromotionSection extends StatelessWidget {
       title:
           "[CRM Campaign] Sports 30% + 10% CB (TGIF30)",
       promotionDetailsItems: [
-        PropotionListtile(title: '18 Feb  22', image: AppAssets.calendar),
-        PropotionListtile(title: 'Voucher discount: 30%', image: AppAssets.path),
-        PropotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
-        PropotionListtile(title: 'Seller funded portion: 85% out of the discount', image: AppAssets.tags),
+        PromotionListtile(title: '18 Feb  22', image: AppAssets.calendar),
+        PromotionListtile(title: 'Voucher discount: 30%', image: AppAssets.path),
+        PromotionListtile(title: 'Registration until: 22 Feb 22', image: AppAssets.checkup),
+        PromotionListtile(title: 'Seller funded portion: 85% out of the discount', image: AppAssets.tags),
         ],
     ),
   ];

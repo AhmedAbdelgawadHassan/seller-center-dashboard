@@ -9,74 +9,74 @@ class TotalPendingOrdersItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, c) {
-        double w = c.maxWidth;
-
-        bool isSmall = w < 420;
-        bool isMedium = w < 700;
-
-        return CustombackgroundContainer(
-          padding: EdgeInsets.all(isSmall ? 12 : 18),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-
-              /// Header
-              Row(
-                children: [
-                  Text("Total Pending\nOrders",
-                      style: AppStyles.style11ExtraBold(context).copyWith(
-                        fontSize: isSmall ? 11 : isMedium ? 13 : 15,
-                      )),
-                  const Spacer(),
-                  Text("10",
-                      style: AppStyles.style15Bold(context).copyWith(
-                        fontSize: isSmall ? 15 : 18,
-                      )),
-                ],
-              ),
-
-              const Gap(4),
-              Text("Today",
-                  style: AppStyles.style8Regular(context).copyWith(
-                    fontSize: isSmall ? 8 : 10,
-                  )),
-
-              Gap(isSmall ? 10 : 18),
-              TotalPendinigOrdersChart(isSmall: isSmall),
-
-              const Divider(thickness: 1),
-
-              Gap(isSmall ? 10 : 14),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Current Daily Order",
-                          style: AppStyles.style12Bold(context).copyWith(
-                            fontSize: isSmall ? 11 : 13,
+    return AspectRatio(
+      aspectRatio: 0.6,
+      child: CustombackgroundContainer(
+            padding: EdgeInsets.all( 18),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                /// Header
+                Row(
+                  children: [
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text("Total Pending\nOrders",
+                          style: AppStyles.style15Bold(context).copyWith(
+                            
                           )),
-                      const Gap(6),
-                      Text("Volume Limitation",
-                          style: AppStyles.style10Light(context).copyWith(
-                            fontSize: isSmall ? 9 : 11,
-                          )),
-                    ],
-                  ),
-                  Text("100",
-                      style: AppStyles.style12Bold(context).copyWith(
-                        fontSize: isSmall ? 13 : 16,
-                      )),
-                ],
-              ),
-            ],
-          ),
-        );
-      },
+                    ),
+                    const Spacer(),
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text("10",
+                          style: AppStyles.style15Bold(context)),
+                    ),
+                  ],
+                ),
+      
+                const Gap(4),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text("Today",
+                      style: AppStyles.style10Regular(context).copyWith(color: Colors.grey)),
+                ),
+      
+                Gap( 18),
+                Expanded(child: TotalPendinigOrdersChart()),  /// chart
+                const Divider(thickness: 1),
+                Gap( 14),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text("Current Daily Order",
+                              style: AppStyles.style12Bold(context)),
+                        ),
+                        const Gap(6),
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text("Volume Limitation",
+                              style: AppStyles.style10Light(context)),
+                        ),
+                      ],
+                    ),
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text("100",
+                          style: AppStyles.style12Bold(context)),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          
+        
+      ),
     );
   }
 }

@@ -5,12 +5,12 @@ import 'package:seller_center_dashboard/widgets/custombackground_container.dart'
 import 'package:seller_center_dashboard/widgets/deal_status_row.dart';
 import 'package:seller_center_dashboard/widgets/promotiom_details.dart';
 import 'package:seller_center_dashboard/widgets/promotion_time_item.dart';
-import 'package:seller_center_dashboard/widgets/propotion_listtile.dart';
+import 'package:seller_center_dashboard/widgets/promotion_listtile.dart';
 
 class PromotionItem extends StatelessWidget {
   const PromotionItem({super.key, required this.days, required this.hours, required this.minutes, required this.promotionDetailsItems, required this.title, required this.color});
   final String days, hours, minutes;
-final List<PropotionListtile> promotionDetailsItems;
+final List<PromotionListtile> promotionDetailsItems;
 final String title;
 final Color color;
   @override
