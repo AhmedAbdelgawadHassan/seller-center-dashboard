@@ -1,9 +1,12 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:seller_center_dashboard/views/seller_dashboard_view.dart';
 
 void main()
 {
-  runApp(SellerCenterDashboard());
+  runApp(DevicePreview(
+    enabled: false,
+    builder: (context) =>  const SellerCenterDashboard()));
 }
 
 
@@ -14,7 +17,9 @@ class SellerCenterDashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SellerDashboardView()
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home: SellerDashboardView(),
     );
   }
 }

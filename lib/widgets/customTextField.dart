@@ -9,7 +9,6 @@ class Customtextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal: 10,vertical: 0),
         fillColor: Colors.white,

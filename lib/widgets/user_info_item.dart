@@ -18,11 +18,11 @@ class UserInfoItem extends StatelessWidget {
         children: [
           Image(image: AssetImage(AppAssets.avater), height: 40, width: 40),
           Positioned(
-            bottom: -5,
-            right:-5,
+            bottom: -4,
+            right:-4,
             child: Container(
-              width: 12,
-              height: 12,
+              width: 10,
+              height: 10,
               decoration: BoxDecoration(
                 color: Colors.green,
                 shape: BoxShape.circle,

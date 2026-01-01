@@ -227,14 +227,22 @@ abstract class AppStyles {
       color: Colors.black,
     );
   }
-  static TextStyle style1(BuildContext context) {
+
+
+  static TextStyle style10Light(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, baseFontSize: 10),
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w300,
       fontFamily: 'Roboto',
       color: Colors.black,
     );
   }
+
+
+
+
+
+
 }
 
 
@@ -243,17 +251,17 @@ abstract class AppStyles {
     double scaleFactor = getScaleFactor(context);  
     double responsiveFontSize = baseFontSize * scaleFactor;
     double upperLimit = baseFontSize * 1.2;
-    double lowerLimit = baseFontSize * 0.8;
+    double lowerLimit = baseFontSize * 0.4;
     return responsiveFontSize.clamp(lowerLimit, upperLimit);
   }
 
   double getScaleFactor(context) {   // Method get Scale Factor that must to multiply to base font size to make it responsive
     double screenWidth=MediaQuery.of(context).size.width;
-    if (screenWidth <= SizeConfig.tablet) { // 800
-      return screenWidth / 550;   
+    if (screenWidth <= SizeConfig.tablet) { // 700
+      return screenWidth / 500;   
     } else if (screenWidth <= SizeConfig.desktop) { // 1200
       return screenWidth / 1000;
     } else {
-      return screenWidth / 1650;    
+      return screenWidth / 1600;    
     }
   }
