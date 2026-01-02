@@ -26,7 +26,7 @@ class SidebarItem extends StatelessWidget {
           // to align the text in left
           alignment: Alignment.topLeft,
           child: Text(
-            sidebarItemModel.title,
+            sidebarItemModel.title!,
             style: AppStyles.style15Medium(context),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,

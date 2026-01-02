@@ -62,7 +62,7 @@ class _AnnouncementPageviewState extends State<AnnouncementPageview> {
     return Column(
       children: [
        AspectRatio(
-         aspectRatio: 2.5,
+         aspectRatio: 2.3,
          child: PageView.builder(
               controller: _controller,
               itemCount: pages.length,

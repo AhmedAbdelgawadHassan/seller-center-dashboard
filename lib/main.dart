@@ -5,7 +5,7 @@ import 'package:seller_center_dashboard/views/seller_dashboard_view.dart';
 void main()
 {
   runApp(DevicePreview(
-    enabled: false,
+    enabled: true,
     builder: (context) =>  const SellerCenterDashboard()));
 }
 

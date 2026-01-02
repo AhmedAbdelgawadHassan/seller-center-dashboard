@@ -14,7 +14,7 @@ class PromotiomDetails extends StatelessWidget {
       children: [
      PromotionDetailsListview(promotionItems:promotionItems),
      Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text('Seller: 0',style: AppStyles.style11SemiBold(context).copyWith(color: Colors.black),),
         // Spacer(),

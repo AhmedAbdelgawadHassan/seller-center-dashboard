@@ -1,7 +1,7 @@
 class SidebarItemModel 
 {
-  final String title;
+  final String? title;
   final String image;
 
-  SidebarItemModel({required this.title, required this.image});
+  SidebarItemModel({ this.title, required this.image});
 }

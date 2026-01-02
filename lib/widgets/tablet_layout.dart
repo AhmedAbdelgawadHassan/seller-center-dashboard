@@ -12,25 +12,22 @@ class TabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 1, child: TabletSidebar()),
+        SizedBox(width: 70, child: TabletSidebar()),   // Sidebar has fixed width even if width of screen is increased or decreased
         Gap(10),
         Expanded(
           flex: 14,
-          child: Column(
-            children: [
-              Gap(15),
-              UserSearchAppbar(),
-              Gap(15),
-              Expanded(
-                child: Row(
-                  children: [
-                    Expanded(flex: 2, child: ChartsAndAnnouncementsSection()),
-                    Gap(20),
-                  ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Gap(15),
+                UserSearchAppbar(),
+                Gap(15),
+                Row(
+                  children: [Expanded(child: ChartsAndAnnouncementsSection())],
                 ),
-              ),
-              Expanded(flex: 1, child: PromotionSection()),
-            ],
+                PromotionSection(),
+              ],
+            ),
           ),
         ),
       ],

@@ -18,8 +18,9 @@ class TabletSidebarItem extends StatelessWidget {
       color: isSelected ? Color(0xff42434C) : Color(0xff35363F),
       elevation: 0,
       child: ListTile(
-        leading: SvgPicture.asset(sidebarItemModel.image,width: 20,height: 20,), 
-           
+        leading: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: 20, minWidth: 20),
+          child: SvgPicture.asset(sidebarItemModel.image,width: 20,height: 20,)), 
       ),
     );
   }
