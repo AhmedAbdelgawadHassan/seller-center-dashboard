@@ -52,6 +52,9 @@ static  String get overview => 'assets/images/overview.svg';
   
  /// File path: assets/images/Path.svg
   static String get path => 'assets/images/Path.svg';
+
+////File path : assets/images/dotsMenu.svg
+ static String get searchMenu => 'assets/images/dotsMenu.svg';
  
 }
 
