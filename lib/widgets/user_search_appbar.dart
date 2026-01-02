@@ -14,6 +14,7 @@ class UserSearchAppbar extends StatelessWidget {
     return CustombackgroundContainer(
       padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Expanded(
             flex: 6,

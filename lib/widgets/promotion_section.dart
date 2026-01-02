@@ -83,12 +83,10 @@ class PromotionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child:Gap(10) ),
-          SliverToBoxAdapter(child:Row(
+    return  Column(
+      children: [
+        Gap(10),
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Text('Coming Soon', style: AppStyles.style12Bold(context)),
@@ -96,20 +94,49 @@ class PromotionSection extends StatelessWidget {
             Text('Promotion List', style: AppStyles.style12Bold(context)),
           ],
         ), 
-
-        ),
-        SliverToBoxAdapter(
-          child: Gap(10),
-        ),
-        SliverToBoxAdapter(
-          child:         Column(children: promotionItems.map((e) => Padding(
-          padding: const EdgeInsets.only(bottom: 12),
-          child: e,
-        )).toList()),
-        )
+        Gap(10),
+       Column(
+        children: promotionItems.asMap().entries.map((entry) {
+          return Padding(
+           padding: const EdgeInsets.only(bottom: 12),
+           child: promotionItems[entry.key],
+         );
+        }).toList(),
+       )
 
       ],
     );
+
+
+
+
+  
+    //   CustomScrollView(
+    //   slivers: [
+    //     SliverToBoxAdapter(
+    //       child:Gap(10) ),
+    //       SliverToBoxAdapter(child:Row(
+    //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+    //       children: [
+    //         Text('Coming Soon', style: AppStyles.style12Bold(context)),
+    //         Text('End Soon', style: AppStyles.style12Bold(context)),
+    //         Text('Promotion List', style: AppStyles.style12Bold(context)),
+    //       ],
+    //     ), 
+
+    //     ),
+    //     SliverToBoxAdapter(
+    //       child: Gap(10),
+    //     ),
+    //     SliverToBoxAdapter(
+    //       child:         Column(children: promotionItems.map((e) => Padding(
+    //       padding: const EdgeInsets.only(bottom: 12),
+    //       child: e,
+    //     )).toList()),
+    //     )
+
+    //   ],
+    // );
     
     
   }}

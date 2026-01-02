@@ -10,7 +10,7 @@ class OrderVolumeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.8,
+      aspectRatio: 2,
       child: CustombackgroundContainer(
         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
         child: Column(

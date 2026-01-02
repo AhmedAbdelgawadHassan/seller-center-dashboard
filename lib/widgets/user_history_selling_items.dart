@@ -13,11 +13,11 @@ class UserHistorySellingItems extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: TotalPendingOrdersItem()),
-        Gap(20),
+        Gap(10),
         Expanded(child: BestSelleingProductItem()),
-        Gap(20),
+        Gap(10),
         Expanded(child: YourRatingItem()),
-        Gap(20),
+        Gap(10),
         Expanded(child: NewProductItem()),
 
       ],

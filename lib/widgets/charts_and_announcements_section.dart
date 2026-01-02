@@ -9,28 +9,38 @@ class ChartsAndAnnouncementsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child:  Gap(10) ,
-        ),
-        SliverToBoxAdapter(
-          child:UserHistorySellingItems(), 
-        ),
-         SliverToBoxAdapter(
-          child:  Gap(15) ,
-        ),
-        SliverToBoxAdapter(
-          child:  UserStatisticsSummaryItems(),
-        ),
-        SliverToBoxAdapter(
-          child: Gap(10),
-        ),
-        SliverToBoxAdapter(
-          child: AnnouncementSection(),
-        )
+    return Column(
+      children: [
+        Gap(37),
+        UserHistorySellingItems(),
+        Gap(20),
+         UserStatisticsSummaryItems(),
+         Gap(20),
+         AnnouncementSection()
+
       ],
     );
+    // CustomScrollView(
+    //   slivers: [
+    //     SliverToBoxAdapter(
+    //       child:  Gap(10) ,
+    //     ),
+    //     SliverToBoxAdapter(
+    //       child:UserHistorySellingItems(), 
+    //     ),
+    //      SliverToBoxAdapter(
+    //       child:  Gap(15) ,
+    //     ),
+    //     SliverToBoxAdapter(
+    //       child:  UserStatisticsSummaryItems(),
+    //     ),
+    //     SliverToBoxAdapter(
+    //       child: Gap(10),
+    //     ),
+    //     SliverToBoxAdapter(
+    //       child: AnnouncementSection(),
+    //     )
+    //   ],
+    // );
  
   }}

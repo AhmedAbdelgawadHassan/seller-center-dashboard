@@ -10,7 +10,7 @@ class TotalPendingOrdersItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 0.6,
+      aspectRatio: 0.5,
       child: CustombackgroundContainer(
             padding: EdgeInsets.all( 18),
             child: Column(

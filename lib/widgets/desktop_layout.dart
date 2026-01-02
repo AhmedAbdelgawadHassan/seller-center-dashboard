@@ -12,24 +12,35 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 1, child: CustomSidebar()),
+        Expanded(
+          flex: 1,
+          child: CustomSidebar(),
+        ),
         Gap(10),
         Expanded(
           flex: 6,
-          child: Column(
-            children: [
-              Gap(15),
-              UserSearchAppbar(),
-              Expanded(
-                child: Row(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: [
+                UserSearchAppbar(),
+                Gap(0),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(flex: 4, child: ChartsAndAnnouncementsSection()),
+                    Expanded(
+                      flex: 4,
+                      child: ChartsAndAnnouncementsSection(),
+                    ),
                     Gap(20),
-                    Expanded(flex: 2, child: PromotionSection()),
+                    Expanded(
+                      flex: 2,
+                      child: PromotionSection(),
+                    ),
                   ],
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],

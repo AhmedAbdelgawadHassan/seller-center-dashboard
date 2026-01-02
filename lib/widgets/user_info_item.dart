@@ -8,10 +8,15 @@ class UserInfoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text("Puma Official Store", style: AppStyles.style15Bold(context)),
-      subtitle: Text(
-        "Change Seller",
-        style: AppStyles.style12SemiBold(context),
+      title: FittedBox(
+          fit: BoxFit.scaleDown,
+        child: Text("Puma Official Store", style: AppStyles.style12Bold(context))),
+      subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+        child: Text(
+          "Change Seller",
+          style: AppStyles.style10SemiBold(context).copyWith(color: Colors.grey),
+        ),
       ),
       trailing: Stack(
         clipBehavior: Clip.none,
