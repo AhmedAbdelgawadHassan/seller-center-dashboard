@@ -84,6 +84,7 @@ class PromotionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Gap(10),
         Row(
@@ -96,6 +97,7 @@ class PromotionSection extends StatelessWidget {
         ), 
         Gap(10),
        Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: promotionItems.asMap().entries.map((entry) {
           return Padding(
            padding: const EdgeInsets.only(bottom: 12),

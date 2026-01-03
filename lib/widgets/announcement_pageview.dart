@@ -1,3 +1,4 @@
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:seller_center_dashboard/models/announcement_model.dart';
 import 'package:seller_center_dashboard/utils/app_styles.dart';
@@ -61,9 +62,8 @@ class _AnnouncementPageviewState extends State<AnnouncementPageview> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-       AspectRatio(
-         aspectRatio: 2.3,
-         child: PageView.builder(
+      
+          ExpandablePageView.builder(
               controller: _controller,
               itemCount: pages.length,
               onPageChanged: (index) {
@@ -80,7 +80,7 @@ class _AnnouncementPageviewState extends State<AnnouncementPageview> {
                 );
               },
             ),
-       ),
+       
         
         SizedBox(height: 15),
         Row(

@@ -24,7 +24,7 @@ class UserSearchAppbar extends StatelessWidget {
           Gap(10),
          Expanded(
           flex: 2,
-          child: UserInfoItem())
+          child: UserInfoItem(title1Color: Colors.black,title2Color: Colors.grey,))
 
         ],
       ),

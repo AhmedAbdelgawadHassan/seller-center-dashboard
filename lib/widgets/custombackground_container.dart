@@ -9,6 +9,7 @@ class CustombackgroundContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
     padding: padding,
+    alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),

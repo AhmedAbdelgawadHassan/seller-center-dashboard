@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:seller_center_dashboard/utils/app_assets.dart';
 import 'package:seller_center_dashboard/utils/app_styles.dart';
+import 'package:seller_center_dashboard/utils/size_config.dart';
 import 'package:seller_center_dashboard/widgets/announcement_pageview.dart';
 import 'package:seller_center_dashboard/widgets/customTextField.dart';
 import 'package:seller_center_dashboard/widgets/custombackground_container.dart';
@@ -12,6 +13,7 @@ class AnnouncementSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return CustombackgroundContainer(
       padding: EdgeInsets.symmetric(vertical: 15),
       child: Column(
@@ -22,7 +24,7 @@ class AnnouncementSection extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'Announcements',
+                   width<SizeConfig.tablet? 'This Week': 'Announcements',
                     style: AppStyles.style20Bold(context),
                   ),
                 ),
